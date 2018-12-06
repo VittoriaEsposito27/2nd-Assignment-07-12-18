@@ -1,5 +1,5 @@
 # QUICKSORT AND MERGESORT REPORT
-# I have tried to implement mergesort and quicksort functions, given in the slides. The main implementation is to write one single function for both mergesort and quicksort. In both cases, the first thing to do is to check if the given list has more than one element: if yes, the list has to be sorted; if not, the functions return the initial list.
+# I have tried to implement mergesort and quicksort functions, given in the slides. The main implementation is to write one function for mergesort and one for quicksort. In both cases, the first thing to do is to check if the given list has more than one element: if yes, the list has to be sorted; if not, the functions return the initial list.
 # IN QUICKSORT
 # After checking that the list has more than one element, I choose a pivot element: in this case the first element of the given list. So I divide the initial list in two lists: in the left list go all the elements smaller than the pivot; in the right one, all the elements larger or equal to the pivot. Then the quicksort function has to be recursively applied to left and right lists: the two lists are not sorted yet: this means that left and right lists will be divided until reaching one element per list.                                      Finally, when the initial list is sorted, the function will return it.
 # IN MERGESORT
