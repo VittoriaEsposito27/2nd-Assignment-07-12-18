@@ -10,4 +10,4 @@
 # CONCLUSION
 # Quicksort is faster than mergesort.
 # Mergesort needs in total n*log(n) comparisons.
-# Quicksort needs in total ∑[n*(n-1)]/2 comparisons, if the smallest or largest value are chosen as pivot; but if the pivot is the median, the number of comparison is the same as mergesort, n*log(n) . 
+# Quicksort needs in total ∑[n*(n-1)]/2 comparisons, if the smallest or largest value are chosen as pivot; but if the pivot is the median, the number of comparisons is the same as mergesort, n*log(n) . 
