@@ -1,4 +1,3 @@
-import timeit
 setup = """
 def quick_sort( lst ) :
     if len ( lst ) > 1 :
@@ -39,7 +38,7 @@ my_randoms2 = random.sample ( range ( 5000 ), 1000 )
 my_randoms3 = random.sample ( range ( 50000 ), 10000 )
 """
 
-
+import timeit
 t1 = timeit.Timer('quick_sort ( my_randoms0 )', setup=setup)
 t2 = timeit.Timer('quick_sort ( my_randoms1 )', setup=setup)
 t3 = timeit.Timer('quick_sort ( my_randoms2 )', setup=setup)
@@ -58,3 +57,18 @@ print ('MergeSort time for 10 elements:', t5.timeit(5))
 print ('MergeSort time for 100 elements:', t6.timeit(5))
 print ('MergeSort time for 1000 elements:', t7.timeit(5))
 print ('MergeSort time for 10000 elements:', t8.timeit(5))
+
+
+
+import matplotlib.pyplot as plt
+y1 = [t1.timeit(5), t2.timeit(5), t3.timeit(5), t4.timeit(5)]
+y2 = [t5.timeit(5), t6.timeit(5), t7.timeit(5), t8.timeit(5)]
+plt.plot(y1, 'o-', label='Quick_Sort')
+plt.plot(y2, '*-', label='Merge_Sort')
+plt.xticks([0,1,2,3], ['10','100','1000','10000'])
+plt.xlabel('List Length')
+plt.ylabel('Time (sec)')
+plt.title('Quick_Sort and Merge_Sort')
+plt.legend()
+plt.grid()
+plt.show()
